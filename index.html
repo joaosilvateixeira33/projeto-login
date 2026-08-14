@@ -8,36 +8,76 @@
 </head>
 <body>
     <main>
-        <section>
-            <img src="images/image.svg" alt="icone">
+        <section class="image">
+            <img src="images/image.svg" alt="Ilustração de login">
         </section>
-        <section>
-            <h3>Bem-vindo de volta</h3>
-            <h2>Faça login na sua conta</h2>
 
-            <form action="#">
-                <div class="form-control">
-                    <label for="iemail">E-mail</label>
-                    <input type="email" name="email" id="iemail" placeholder="exemplo@gmail.com">
-                </div>
-                
-                <div class="form-control">
-                    <label for="ipassword">Senha</label>
-                    <input type="password" name="password" id="ipassword" placeholder="0123456789">
-                </div>
+        <section class="login">
+            <div class="login-content">
+                <h3>Bem-vindo de volta</h3>
+                <h2>Faça login na sua conta</h2>
 
-                <div class="important">
-                    <p><input type="radio" name="remember" id="iremember"> Lembre de mim</p>
-                    <a href="#">Esqueceu sua senha?</a>
-                </div>
+                <form action="#">
+                    <div class="form-control">
+                        <label for="iemail">E-mail</label>
 
-                <div class="actions">
-                    <button type="submit">Entrar na conta</button>
-                    <button type="submit">Ou faça login com o google</button>
-                </div>
-            </form>
+                        <input
+                            type="email"
+                            name="email"
+                            id="iemail"
+                            placeholder="exemplo@gmail.com"
+                            required
+                        >
+                    </div>
 
-            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+                    <div class="form-control">
+                        <label for="ipassword">Senha</label>
+
+                        <input
+                            type="password"
+                            name="password"
+                            id="ipassword"
+                            placeholder="0123456789"
+                            required
+                        >
+                    </div>
+
+                    <div class="important">
+                        <label class="remember" for="iremember">
+                            <input
+                                type="checkbox"
+                                name="remember"
+                                id="iremember"
+                            >
+
+                            Lembre de mim
+                        </label>
+
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+
+                    <div class="actions">
+                        <button
+                            class="btn-entrar"
+                            type="submit"
+                        >
+                            Entrar na conta
+                        </button>
+
+                        <button
+                            class="btn-entrar-google"
+                            type="button"
+                        >
+                            Ou faça login com o Google
+                        </button>
+                    </div>
+                </form>
+
+                <p class="register">
+                    Não tem uma conta?
+                    <a href="#">Cadastre-se</a>
+                </p>
+            </div>
         </section>
     </main>
 </body>

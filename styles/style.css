@@ -1,23 +1,265 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --brand-color: #1e9e6a;
+    --brand-color: #1e9e6a;
 
-  --dark: #1a202c;
+    --dark: #1a202c;
 
-  --gray-10: #656769;
-  --gray-20: #e8e8e8;
-  --gray-30: #f7fafc;
+    --gray-10: #656769;
+    --gray-20: #e8e8e8;
+    --gray-30: #f7fafc;
 
-  --white: #ffffff;
+    --white: #ffffff;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-  font-family: "Archivo", sans-serif;
+    font-family: "Archivo", sans-serif;
+    color: var(--dark);
+}
+
+main {
+    min-height: 100vh;
+}
+
+/* IMAGEM */
+
+.image {
+    display: none;
+}
+
+/* LOGIN */
+
+.login {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+.login-content {
+    width: 100%;
+}
+
+/* TÍTULOS */
+
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-bottom: 32px;
+}
+
+/* FORMULÁRIO */
+
+form {
+    width: 100%;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+}
+
+.form-control label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-control input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 16px;
+
+    background-color: var(--gray-30);
+
+    border: 1px solid var(--gray-20);
+    border-radius: 5px;
+
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.form-control input::placeholder {
+    color: var(--gray-10);
+}
+
+.form-control input:focus {
+    border-color: var(--brand-color);
+}
+
+/* LEMBRE DE MIM */
+
+.important {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 32px;
+
+    font-size: 12px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.remember input {
+    accent-color: var(--brand-color);
+}
+
+.important a {
+    color: var(--brand-color);
+
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+.important a:hover {
+    text-decoration: underline;
+}
+
+/* BOTÕES */
+
+.actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.actions button {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: "Archivo", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.btn-entrar {
+    background-color: var(--brand-color);
+    color: var(--white);
+}
+
+.btn-entrar:hover {
+    filter: brightness(0.9);
+}
+
+.btn-entrar-google {
+    background-color: var(--dark);
+    color: var(--white);
+
+    background-image: url("../images/icon.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 20px center;
+
+    padding: 0 20px 0 50px;
+}
+
+.btn-entrar-google:hover {
+    filter: brightness(1.2);
+}
+
+/* CADASTRO */
+
+.register {
+    margin-top: 32px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.register a {
+    color: var(--brand-color);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+
+    .login-content {
+        max-width: 400px;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 100vh;
+
+        background-color: #f3fff7;
+    }
+
+    .image img {
+        width: 60%;
+        max-width: 420px;
+    }
+
+    .login {
+        min-height: 100vh;
+
+        padding: 40px;
+    }
+
+    .login-content {
+        width: 100%;
+        max-width: 344px;
+    }
 }
